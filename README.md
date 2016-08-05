@@ -31,8 +31,8 @@ Create the following endpoints in `server.js` using express.
 3.  Get all users, filtering by privilege. You will receive the privilege as a url parameter. ('admin, moderator, user').  Return an array of all users with the same privilege specified in the parameter.
    `GET: /api/users/admin`
 
-4. Create a new user.  You will receive the data on the body.  Return a valid status code.
-   `POST: /api/users`
+4. Create a new user.  You will receive the data on the body.  All users will need an id property.   Manage the value so that it increments each time.  Collections should be initialized with a default array.  Return a valid status code and the new user object you created (with the id on it).  
+    `POST: /api/users`
 
 5. Create a new admin user. You will receive their privilege as a url parameter. ('admin, moderator, or user').  Return a valid status code.  Make sure to set the privilege correctly.
    `POST: /api/users/admin`
